@@ -2,13 +2,13 @@ let data = [];
 const form = document.querySelector('#form1');
 const tBody=document.querySelector('#table-body')
 
-let object = JSON.parse(localStorage.getItem("object"));
+
 //----------------FUNCION LEER OBJETO-----------------------------\
 const readAll = () => {
     
     let elements = '';
     
-    object.map(value => {
+    data.map(value => {
         const { id, fecha, monto } = value;
         elements += `<tr>
         <td>${fecha}</td>
@@ -49,9 +49,8 @@ const add = () => {
         
         const newObj = { id: Date.now(), fecha: fecha, monto: monto };
         
-        object.push(newObj)
+        data.push(newObj)
 
-        localStorage.setItem("object", JSON.stringify(data));
         
         sumador();
         
@@ -63,7 +62,7 @@ const sumador = () => {
     
     let valorInit = 0;
 
-    let sumatoria = object.reduce(function (acc, val) {
+    let sumatoria = data.reduce(function (acc, val) {
 
         return acc + parseInt(val.monto);
 
@@ -86,7 +85,7 @@ const edit = (id) => {
         }
     });
                     
-    let obj = object.find(obj => obj.id === id);
+    let obj = data.find(obj => obj.id === id);
     
     document.querySelector('.id').value = obj.id
     document.querySelector(".fecha").value = obj.fecha;
@@ -99,7 +98,7 @@ const deleteF = (id) => {
     
     if (confirm("Seguro que quieres eliminar este monto?")) {
         
-        object = object.filter(data => data.id !== id);
+        data = data.filter(data => data.id !== id);
     }
     sumador();
     readAll();
@@ -112,9 +111,9 @@ const update = () => {
     let fecha = document.querySelector(".fecha").value;
     let monto = document.querySelector('.inputAct').value;
     
-    let index = object.findIndex(rec => rec.id === id);
+    let index = data.findIndex(rec => rec.id === id);
 
-    object[index] = { id, fecha, monto };
+    data[index] = { id, fecha, monto };
     
     document.querySelector(".modalAct").style.display = "none";
     
