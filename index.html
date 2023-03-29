@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>TITULO</title>
+</head>
+<body onload="readAll()">
+
+    <header>
+        <h1>TITULO</h1>
+        <h3>Usuario: Leandro Balmaceda</h3>
+    </header>
+
+    <div class="modalAct">
+        <form id="formModal">
+            <p>Coloca el monto nuevo :D</p>
+            <input type="text" hidden class="id">
+            <input type="text" hidden class="fecha">
+            <input type="text" class="inputAct" >
+            <button type="button" id="btnAct" onclick="update()">Actualizar monto</button>
+        </form>
+
+    </div>
+
+    <div class="container">
+        <div class="cliente">
+            <h2>prueba: Leandro Balmaceda</h2>
+        </div>
+        <div class="container-cliente">
+            <table>
+                <thead>
+                    <tr>
+                     <th>fecha</th>
+                     <th>nota</th>
+                     <th>monto</th>
+                     <th>Editar</th>
+                     <th>Eliminar</th>
+                 </tr>
+                </thead>
+                <tbody id="table-body"></tbody>
+            </table>
+        </div>
+
+        <footer>
+            <form id="form1">
+                <div class="agregar-monto">
+                    <input type="text" placeholder="Agregar un monto" id="inputMonto">
+                    <button type="button" onclick="add()" >Agregar</button>
+
+                </div>
+                <div class="total">Total $0</div>
+                <!-- <div class="entrega-adelanto">
+                    <h2>Entrega adelanto</h2>
+                    <input type="text" placeholder="Monto">
+                    <button class="entrega-adelanto-button">mandar</button>
+                </div> -->
+                <!-- <button class="marca-paga-button"><p>Marcar <br> como pagado</p></button> -->
+            </form>
+            <!-- <div class="btn-cambiar-cliente"></div> -->
+        </footer>
+
+    </div>
+    <script src="cliente.js"></script>
+</body>
+</html>

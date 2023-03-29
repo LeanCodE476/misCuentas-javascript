@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  border: none;
+  outline: none;
+}
+
+html {
+  font-size: 10px;
+  font-family: "Oswald", sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2E4053;
+}
+body .container-login {
+  position: relative;
+  width: 40rem;
+}
+body .container-login .alert {
+  text-align: center;
+  display: none;
+  position: absolute;
+  top: 12rem;
+  width: 100%;
+  height: 5rem;
+}
+body .container-login .alert p {
+  line-height: 5rem;
+  font-size: 2.5rem;
+  color: #FFBC42;
+}
+body .container-login h1 {
+  font-size: 8rem;
+  text-align: center;
+  color: white;
+  margin-bottom: 5rem;
+}
+body .container-login form {
+  display: flex;
+  flex-direction: column;
+}
+body .container-login form input {
+  background-color: rgba(255, 255, 255, 0.459);
+  backdrop-filter: blur(50px);
+  border-radius: 0.5rem;
+  margin-top: 1rem;
+  padding: 1.5rem 0 1.5rem 0;
+  padding-left: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.678);
+}
+body .container-login form input::placeholder {
+  padding-left: 1rem;
+  color: rgba(0, 0, 0, 0.678);
+}
+body .container-login form button {
+  border-radius: 0.5rem;
+  margin-top: 2rem;
+  padding: 1.5rem 0 1.5rem 0;
+  background-color: #FFBC42;
+  color: white;
+  font-size: 2.2rem;
+  cursor: pointer;
+}
+body .container-login form button:hover {
+  background-color: rgba(0, 0, 0, 0.678);
+}
+body .container-login .container-create {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+body .container-login .container-create p {
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+body .container-login .container-create p:nth-child(1) {
+  margin-right: 2rem;
+  padding-right: 1rem;
+  border-right: 1px solid white;
+}
+body .container-login .container-create p:hover {
+  color: #FFBC42;
+}
+
+/*# sourceMappingURL=login.css.map */

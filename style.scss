@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;300&display=swap');
+
+// colores
+
+$blanco-simple:#FFFFFF;
+$background-general:#D9D9D9;
+$color-turquesa:#1A5F5B;
+$background-rojoClaro:#f8333350;
+$color-rojoFuerte:rgb(255, 0, 0);
+$color-gris:rgb(100, 100, 100);
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	border: none;
+	outline: none;
+}
+html{
+    font-size: 10px;
+    font-family: 'Oswald', sans-serif;
+    background-color: $background-general;
+
+}
+
+.modalAct{
+    display: none;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(65, 65, 65, 0.596);
+
+    form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 10rem auto;
+        width: 50rem;
+        height: 30rem;
+        background-color: $background-general;
+        border-radius: .5rem;
+
+        p{
+            color: $color-turquesa;
+            font-size: 3rem;
+            margin-top: 7rem;
+        }
+        input,button{
+            width: 30rem;
+            font-size: 2rem;
+        }
+       
+        input{ 
+            padding: 1rem;
+            margin-top: 1rem;
+            border-radius: .5rem;
+        }
+        button{
+            margin-top: 1rem;
+            color: $blanco-simple;
+            border: 1px solid $color-gris;
+            font-weight: 600;
+            padding: 1rem;
+            background-color: $color-turquesa;
+            cursor: pointer;
+            border-radius: .5rem;
+            &:hover{
+                background-color: rgb(71, 175, 1);
+
+            }
+        }
+    }
+
+
+}
+header{
+    background-image: url('images/background-blur.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: relative;
+    height: 7rem;
+ 
+
+    h1{
+        color: $blanco-simple;
+        text-align: center;
+        font-size: 3rem;
+        line-height: 7rem;
+    }
+
+    h3{
+        color: $blanco-simple;
+        position:absolute;
+        bottom: 0;
+        right: 5rem; 
+        font-size: 1.8rem;
+        
+       
+    }
+}
+.container{
+    height: 100vh;
+    width: 100%;
+
+    .cliente{
+        color: $color-turquesa;
+        border-radius: .5rem;
+        font-size: 1.3rem;
+        padding: 1rem;
+        margin:  1rem 0 0 5rem;
+        width: 20rem;
+        background-color: $blanco-simple;
+    }
+    .container-cliente{
+        background-color:$blanco-simple;
+        height: 50rem;
+        width: 60%;
+        min-width: 60rem;
+        margin:  1rem 0 0 5rem;
+        border-radius: .5rem;
+        overflow-y: auto;
+        
+        table{
+            margin-top: .5rem;
+            width: 100%;
+             border-spacing: 0;
+             border-collapse: collapse;
+             th{
+                
+                width: 10rem;
+
+                color: $color-turquesa;
+                font-size: 1.8rem;
+             }
+            td{
+
+                font-weight: 600;
+                font-size: 1.5rem;
+                padding: .5rem;
+                overflow: hidden;
+                width: 10rem;
+                max-width: 10rem;
+                padding: none;
+                text-align: center;
+            }
+            .delete{
+                background-color: rgb(255, 0, 0);
+                color: rgb(255, 255, 255);
+                font-size: 1.3rem;
+                font-weight: 600;
+                cursor: pointer;
+                padding: 1rem;
+                border-radius: .5rem;
+            }
+            .edit{
+                background-color: rgb(0, 187, 0);
+                color: rgb(255, 255, 255);
+                font-size: 1.3rem;
+                font-weight: 600;
+                cursor: pointer;
+                padding: 1rem;
+                border-radius: .5rem;
+            }
+        }
+
+    }
+    footer{
+
+        form{
+            display: flex;
+
+            .agregar-monto{
+                display: flex;
+                border: 1px solid rgba(0, 0, 0, 0.336);
+                width: 30rem;
+                height: 6rem;
+                 margin: 3rem 0 0 5rem;
+                 border-radius: .5rem;
+                 overflow: hidden;
+                 input{
+                    padding-left: 1rem;
+                    height: 100%;
+                    width: 20rem;
+                    font-size: 2rem;
+                    &::placeholder{
+                        padding-left:1rem;
+                    }
+                 }
+                 button{
+                    color: $color-turquesa;
+                    height: 100%;
+                    width: 100%;
+                    font-size: 1.3rem;
+                    line-height: 6.5rem;
+                    font-weight: 600;
+                 
+                    &:hover{
+                        cursor: pointer;
+                        background-color: rgba(153, 255, 0, 0.404);
+                       
+                    }
+                 }
+            }
+            .total{
+                color: $color-turquesa;
+                line-height:6rem ;
+                text-align: center;
+                margin: 3rem 0 0 2rem;
+                border-radius: .5rem;
+                background-color: $blanco-simple;
+                font-size: 3rem;
+                width: 20rem;
+                height: 6rem;
+            }
+         .marca-paga-button{
+            padding: 1rem 1rem 5rem 1rem;
+            height: 4rem;
+            margin: 3rem 0 0 2rem;
+            border: 1px solid $color-rojoFuerte;
+            background-color: $background-rojoClaro;
+            border-radius: .5rem;
+            color: $color-rojoFuerte;
+            p{
+                text-align: start;
+                font-size: 1.8rem;
+            
+         }
+             &:hover{
+                cursor: pointer;
+                color: blue;
+              
+            }
+            }
+            
+        }
+       
+        .entrega-adelanto{
+            position: relative;
+            line-height: 2rem;
+            color: $color-turquesa;
+            font-size: 1.4rem;
+            width: 15rem ;
+            height: 5rem;
+            margin:  3rem 0 0 2rem;
+            padding:  1rem 0 0 0;
+            h2{
+              
+            }
+          
+            input{
+                border-radius: .5rem;
+                width: 100%;
+                margin-top: .5rem;
+                font-size: 1.7rem;
+                font-weight: 500;
+                padding:  .2rem 0 .3rem 1rem;
+                &::placeholder{
+                padding-left: .3rem;
+                  font-weight: 600;
+                }
+            }
+        }
+    }
+}
